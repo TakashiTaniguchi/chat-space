@@ -16,6 +16,7 @@ body, html {
 .chat-side {
   height: 100vh;
   width: 300px;
+  float: left;
   &__user {
     background-color: #253141;
     height: 15%;
@@ -31,6 +32,7 @@ body, html {
 .chat-main {
   height: 100vh;
   width: calc(100vw - 300px);
+  float: left;
   &__header {
     height: 15%;
   }
@@ -39,5 +41,7 @@ body, html {
   }
   &__footer {
     height:90px;
+    width: 100%;
+    background-color: #B8C3C7;
   }
 }
