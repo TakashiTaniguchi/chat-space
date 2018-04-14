@@ -57,6 +57,25 @@ body, html {
     background-color: #2f3E51;
     height: 85%;
     width: 100%;
+    &-list {
+      height: 100%;
+      width: 100%;
+      color: #FFFFFF;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+  &__group {
+    padding: 20px;
+    &-name {
+      font-size: 15px;
+    }
+    &-message {
+      font-size: 11px;
+      padding-top: 5px;
+    }
   }
 }
 
