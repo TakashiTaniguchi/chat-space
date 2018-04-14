@@ -1,14 +1,13 @@
 .notification
   sample-notice
 .chat-side
-  .chat-side__user
-    .chat-side__user-content
-      .chat-side__user-name
-        sample-user-name
-      %a.chat-side__user--edit-user{ href: "" }
-        %i.fa.fa-cog
-      %a.chat-side__user--new-group{ href: "" }
-        %i.fa.fa-pencil-square-o
+  .chat-side__user.clearfix
+    .chat-side__user--name
+      sample-user-name
+    %a.chat-side__user--edit-user{ href: "" }
+      %i.fa.fa-cog
+    %a.chat-side__user--new-group{ href: "" }
+      %i.fa.fa-pencil-square-o
   .chat-side__groups
     .chat-side__groups-list
       %a{ href: "" }
@@ -31,14 +30,14 @@
             sample group message sample group message sample group message
 .chat-main
   .chat-main__header
-    .chat-main__header--group.clearfix
-      .chat-main__header--group-name
+    .chat-main__header--top.clearfix
+      .chat-main__header--top-name
         sample-group-name
-      %a.chat-main__header--group-edit-btn{ href: "" }
+      %a.chat-main__header--top-edit-btn{ href: "" }
         Edit
-    .chat-main__header-members
+    .chat-main__header--bottom
       MEMBER:
       %i
-        sample-user-name
+        sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name
   .chat-main__body
   .chat-main__footer
