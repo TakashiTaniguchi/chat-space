@@ -30,13 +30,14 @@
             sample group message sample group message sample group message
 .chat-main
   .chat-main__header
-    .chat-main__header--group
+    .chat-main__header--group.clearfix
       .chat-main__header--group-name
         sample-group-name
-      .chat-main__header--group-members
-        MEMBER:
-        %i
-          sample-user-name
-
+      %a.chat-main__header--group-edit-btn{ href: "" }
+        Edit
+    .chat-main__header-members
+      MEMBER:
+      %i
+        sample-user-name
   .chat-main__body
   .chat-main__footer
