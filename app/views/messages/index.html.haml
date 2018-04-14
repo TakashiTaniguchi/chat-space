@@ -1,11 +1,15 @@
-%div.notification
-%div.chat-side
-  %div.chat-side__user
-    %div.chat-side__user-content
-      %div.chat-side__user-name
-        username
-  %div.chat-side__groups
-%div.chat-main
-  %div.chat-main__header
-  %div.chat-main__body
-  %div.chat-main__footer
+.notification
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name
+        sample-user-name
+      %a.chat-side__user--edit-user{ href: "" }
+        %i.fa.fa-cog
+      %a.chat-side__user--new-group{ href: "" }
+        %i.fa.fa-pencil-square-o
+  .chat-side__groups
+.chat-main
+  .chat-main__header
+  .chat-main__body
+  .chat-main__footer

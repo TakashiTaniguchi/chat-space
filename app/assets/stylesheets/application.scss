@@ -7,6 +7,10 @@ body, html {
   width: 100%;
 }
 
+.fa {
+  color: #FFF;
+}
+
 .notification {
   background-color: #38AEF0;
   height: 24px;
@@ -37,6 +41,16 @@ body, html {
       color: #FFFFFF;
       position: relative;
       display: inline-block;
+      float: left;
+    }
+    &--new-group {
+      display: inline-block;
+      float: right;
+    }
+    &--edit-user {
+      margin-left: 7px;
+      display: inline-block;
+      float: right;
     }
   }
   &__groups {
