@@ -85,6 +85,20 @@ body, html {
   float: left;
   &__header {
     height: 15%;
+    border: 1px solid #EEEEEE;
+    background-color: yellow;
+    &--group {
+      width: calc(100% - 80px);
+      margin: 0 40px;
+      &-name {
+        font-size: 20px;
+        padding-top: 35px;
+      }
+      &-members {
+        font-size: 12px;
+        padding-top: 15px;
+      }
+    }
   }
   &__body {
     height: calc(100vh - 15% - 90px)
