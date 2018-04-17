@@ -134,8 +134,33 @@ body, html {
     }
   }
   &__footer {
-    height:90px;
+    height: 90px;
     width: 100%;
     background-color: #B8C3C7;
+      &--form {
+        padding: 20px 40px;
+      }
+  }
+}
+
+.form {
+  &__message {
+    height: 50px;
+    width: calc(100% - 135px);
+    padding: 0 10px;
+    border: none;
+    font-size: 16px;
+    color: #434A54;
+    float: left;
+  }
+  &__submit {
+    height: 50px;
+    width: 100px;
+    border: none;
+    background-color: #38AEF0;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    float: right;
   }
 }

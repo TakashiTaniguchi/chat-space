@@ -74,3 +74,6 @@
           sample user message sample user message sample user message sample user message
           sample user message sample user message sample user message sample user message
   .chat-main__footer
+    %form.chat-main__footer--form{ action: "", method: "post" }
+      %input.form__message{ placeholder: "type a message", type: "text", name: "massage[body]"}
+      %input.form__submit{ type: "submit", value: "Send" }
