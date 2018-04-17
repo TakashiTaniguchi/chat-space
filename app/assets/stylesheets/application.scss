@@ -94,8 +94,10 @@ body, html {
       }
     }
     &--bottom {
+      height: 19px;
       font-size: 12px;
       color: #999999;
+      overflow: scroll;
     }
   }
   &__body {
