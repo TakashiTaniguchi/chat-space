@@ -126,7 +126,7 @@ body, html {
       &-name {
         font-size: 16px;
         font-weight: bold;
-        color: #434A54;
+        color: $mainDarkBlueGray;
         float: left;
       }
       &-date-and-time {
@@ -138,7 +138,7 @@ body, html {
     }
     &--bottom {
         font-size: 14px;
-        color: #434A54;
+        color: $mainDarkBlueGray;
     }
   }
   &__footer {
@@ -158,7 +158,7 @@ body, html {
     padding: 0 10px;
     border: none;
     font-size: 16px;
-    color: #434A54;
+    color: $mainDarkBlueGray;
     float: left;
   }
   &__mask {
@@ -168,7 +168,7 @@ body, html {
     padding-right: 10px;
     background-color: white;
     font-size: 20px;
-    color: #434A54;
+    color: $mainDarkBlueGray;
     float: left;
   }
   &__submit {
