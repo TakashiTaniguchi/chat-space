@@ -1,7 +1,7 @@
 .notification
   sample-notice
 .chat-side
-  .chat-side__user.clearfix
+  .chat-side__user
     .chat-side__user--name
       sample-user-name
     %a.chat-side__user--edit-user{ href: "" }
@@ -29,7 +29,7 @@
           sample group message sample group message sample group message
 .chat-main
   .chat-main__header
-    .chat-main__header--top.clearfix
+    .chat-main__header--top
       .chat-main__header--top-name
         sample-group-name
       %a.chat-main__header--top-edit-btn{ href: "" }
@@ -41,7 +41,7 @@
   .chat-main__body
     .chat-main__body--messages
       .chat-main__message
-        .chat-main__message--top.clearfix
+        .chat-main__message--top
           .chat-main__message--top-name
             sample-user-name
           .chat-main__message--top-date-and-time
@@ -49,7 +49,7 @@
         .chat-main__message--bottom
           sample user message sample user message
       .chat-main__message
-        .chat-main__message--top.clearfix
+        .chat-main__message--top
           .chat-main__message--top-name
             sample-user-name
           .chat-main__message--top-date-and-time
@@ -57,7 +57,7 @@
         .chat-main__message--bottom
           sample user message sample user message sample user message sample user message
       .chat-main__message
-        .chat-main__message--top.clearfix
+        .chat-main__message--top
           .chat-main__message--top-name
             sample-user-name
           .chat-main__message--top-date-and-time
@@ -65,7 +65,7 @@
         .chat-main__message--bottom
           sample user message sample user message sample user message sample user message sample user message sample user message
       .chat-main__message
-        .chat-main__message--top.clearfix
+        .chat-main__message--top
           .chat-main__message--top-name
             sample-user-name
           .chat-main__message--top-date-and-time
@@ -74,7 +74,7 @@
           sample user message sample user message sample user message sample user message
           sample user message sample user message sample user message sample user message
   .chat-main__footer
-    %form.chat-main__footer--form.clearfix{ action: "", method: "post" }
+    %form.chat-main__footer--form{ action: "", method: "post" }
       %input.form__message{ placeholder: "type a message", type: "text", name: "massage[body]"}
       %label.form__mask
         %i.fa.fa-picture-o

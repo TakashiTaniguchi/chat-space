@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./config/variable";
+@import "./mixin/clearfix";
 @import "font-awesome";
 
 body, html {
@@ -9,12 +10,6 @@ body, html {
 
 .fa {
   color: inherit;
-}
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 .notification {
@@ -32,6 +27,7 @@ body, html {
   width: 300px;
   float: left;
   &__user {
+    @include clearfix();
     background-color: $mainMidnightBlue;
     line-height: 100px;
     padding: 0 20px;
@@ -83,6 +79,7 @@ body, html {
     padding: 0 40px;
     border-bottom: 1px solid $mainLightGray;
     &--top {
+      @include clearfix();
       &-name {
         font-size: 20px;
         color: $mainMidnightGray;
@@ -121,6 +118,7 @@ body, html {
     width: 100%;
     padding-bottom: 40px;
     &--top {
+      @include clearfix();
       line-height: 24px;
       padding-bottom: 10px;
       &-name {
@@ -146,6 +144,7 @@ body, html {
     width: 100%;
     background-color: $mainDarkGray;
       &--form {
+        @include clearfix();
         padding: 20px 40px;
       }
   }
