@@ -74,6 +74,9 @@
           sample user message sample user message sample user message sample user message
           sample user message sample user message sample user message sample user message
   .chat-main__footer
-    %form.chat-main__footer--form{ action: "", method: "post" }
+    %form.chat-main__footer--form.clearfix{ action: "", method: "post" }
       %input.form__message{ placeholder: "type a message", type: "text", name: "massage[body]"}
+      %label.form__mask
+        %i.fa.fa-picture-o
+        %input.hidden{ type: "file", name: "message[image]" }
       %input.form__submit{ type: "submit", value: "Send" }
