@@ -19,7 +19,7 @@ body, html {
 
 .notification {
   background-color: #38AEF0;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
 }
 
@@ -39,7 +39,7 @@ body, html {
     &--name {
       font-size: 16px;
       font-weight: bold;
-      color: #FFFFFF;
+      color: white;
       float: left;
     }
     &--new-group {
@@ -50,13 +50,13 @@ body, html {
       float: right;
     }
     .fa {
-      color: #FFFFFF;
+      color: white;
     }
   }
   &__groups {
     background-color: #2f3E51;
     height: calc(100% - 100px);
-    color: #FFFFFF;
+    color: white;
     a {
       color: inherit;
       text-decoration: none;
@@ -165,7 +165,7 @@ body, html {
     line-height: 50px;
     width: 22px;
     padding-right: 10px;
-    background-color: #FFFFFF;
+    background-color: white;
     font-size: 20px;
     color: #434A54;
     float: left;
@@ -176,7 +176,7 @@ body, html {
     border: none;
     background-color: #38AEF0;
     font-size: 16px;
-    color: #FFFFFF;
+    color: white;
     text-align: center;
     float: right;
   }
