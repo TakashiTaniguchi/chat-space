@@ -18,7 +18,7 @@ body, html {
 }
 
 .notification {
-  background-color: #38AEF0;
+  background-color: $mainLightBlue;
   color: white;
   text-align: center;
 }
@@ -91,11 +91,11 @@ body, html {
       }
       &-edit-btn {
         font-size: 12px;
-        color: #38AEF0;
+        color: $mainLightBlue;
         text-decoration: none;
         line-height: 38px;
         padding: 0 20px;
-        border: 1px solid #38AEF0;
+        border: 1px solid $mainLightBlue;
         margin-top: 28px;
         float: right;
       }
@@ -174,7 +174,7 @@ body, html {
     height: 50px;
     width: 100px;
     border: none;
-    background-color: #38AEF0;
+    background-color: $mainLightBlue;
     font-size: 16px;
     color: white;
     text-align: center;
