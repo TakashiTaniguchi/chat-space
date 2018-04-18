@@ -8,7 +8,7 @@ body, html {
 }
 
 .fa {
-  color: #FFF;
+  color: inherit;
 }
 
 .clearfix:after {
@@ -48,6 +48,9 @@ body, html {
     &--edit-user {
       margin-left: 7px;
       float: right;
+    }
+    .fa {
+      color: #FFFFFF;
     }
   }
   &__groups {
@@ -164,6 +167,7 @@ body, html {
     padding-right: 10px;
     background-color: #FFFFFF;
     font-size: 20px;
+    color: #434A54;
     float: left;
   }
   &__submit {
