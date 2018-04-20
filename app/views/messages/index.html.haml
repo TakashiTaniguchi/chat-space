@@ -78,5 +78,5 @@
       %input.chat-main__form--message{ placeholder: "type a message", type: "text", name: "massage[body]"}
       = label_tag("", class: "chat-main__form--mask") do
         %i.fa.fa-picture-o
-        %input.hidden{ type: "file", name: "message[image]" }
+        =file_field(:message, :image, class:"hidden")
       = submit_tag("Send", class: "chat-main__form--submit")
