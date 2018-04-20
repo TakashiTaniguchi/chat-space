@@ -79,4 +79,4 @@
       %label.chat-main__form--mask
         %i.fa.fa-picture-o
         %input.hidden{ type: "file", name: "message[image]" }
-      %input.chat-main__form--submit{ type: "submit", value: "Send" }
+      = submit_tag("Send", class: "chat-main__form--submit")
