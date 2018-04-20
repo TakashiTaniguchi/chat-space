@@ -74,7 +74,7 @@
           sample user message sample user message sample user message sample user message
           sample user message sample user message sample user message sample user message
   .chat-main__footer
-    %form.chat-main__form{ action: "", method: "post" }
+    = form_tag({ controller: "messages", action: "index" }, class: "chat-main__form") do
       %input.chat-main__form--message{ placeholder: "type a message", type: "text", name: "massage[body]"}
       %label.chat-main__form--mask
         %i.fa.fa-picture-o
