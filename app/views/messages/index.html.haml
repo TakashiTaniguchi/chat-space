@@ -4,24 +4,24 @@
   .chat-side__user
     .chat-side__user--name
       sample-user-name
-    %a.chat-side__user--edit-user{ href: "" }
+    = link_to "", class: "chat-side__user--edit-user" do
       %i.fa.fa-cog
-    %a.chat-side__user--new-group{ href: "" }
+    = link_to "", class: "chat-side__user--new-group" do
       %i.fa.fa-pencil-square-o
   .chat-side__groups
-    %a{ href: "" }
+    = link_to "" do
       .chat-side__group
         .chat-side__group--name
           sample-group-name
         .chat-side__group--message
           sample group message
-    %a{ href: "" }
+    = link_to "" do
       .chat-side__group
         .chat-side__group--name
           sample-group-name
         .chat-side__group--message
           sample group message sample group message
-    %a{ href: "" }
+    = link_to "" do
       .chat-side__group
         .chat-side__group--name
           sample-group-name
@@ -32,7 +32,7 @@
     .chat-main__header--top
       .chat-main__header--name
         sample-group-name
-      %a.chat-main__header--edit-btn{ href: "" }
+      =link_to "", class: "chat-main__header--edit-btn" do
         Edit
     .chat-main__header--bottom
       MEMBER:
