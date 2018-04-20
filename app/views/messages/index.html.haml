@@ -76,7 +76,7 @@
   .chat-main__footer
     = form_tag({ controller: "messages", action: "index" }, class: "chat-main__form") do
       %input.chat-main__form--message{ placeholder: "type a message", type: "text", name: "massage[body]"}
-      %label.chat-main__form--mask
+      = label_tag("", class: "chat-main__form--mask") do
         %i.fa.fa-picture-o
         %input.hidden{ type: "file", name: "message[image]" }
       = submit_tag("Send", class: "chat-main__form--submit")
