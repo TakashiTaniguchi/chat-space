@@ -1,0 +1,82 @@
+.notification
+  sample-notice
+.chat-side
+  .chat-side__user
+    .chat-side__user--name
+      sample-user-name
+    = link_to "", class: "chat-side__user--edit-user" do
+      %i.fa.fa-cog
+    = link_to "", class: "chat-side__user--new-group" do
+      %i.fa.fa-pencil-square-o
+  .chat-side__groups
+    = link_to "" do
+      .chat-side__group
+        .chat-side__group--name
+          sample-group-name
+        .chat-side__group--message
+          sample group message
+    = link_to "" do
+      .chat-side__group
+        .chat-side__group--name
+          sample-group-name
+        .chat-side__group--message
+          sample group message sample group message
+    = link_to "" do
+      .chat-side__group
+        .chat-side__group--name
+          sample-group-name
+        .chat-side__group--message
+          sample group message sample group message sample group message
+.chat-main
+  .chat-main__header
+    .chat-main__header--top
+      .chat-main__header--name
+        sample-group-name
+      =link_to "", class: "chat-main__header--edit-btn" do
+        Edit
+    .chat-main__header--bottom
+      MEMBER:
+      %i
+        sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name
+  .chat-main__body
+    .chat-main__body--messages
+      .chat-main__message
+        .chat-main__message--top
+          .chat-main__message--name
+            sample-user-name
+          .chat-main__message--date-and-time
+            2018-04-01 09:30:04
+        .chat-main__message--bottom
+          sample user message sample user message
+      .chat-main__message
+        .chat-main__message--top
+          .chat-main__message--name
+            sample-user-name
+          .chat-main__message--date-and-time
+            2018-04-01 09:34:05
+        .chat-main__message--bottom
+          sample user message sample user message sample user message sample user message
+      .chat-main__message
+        .chat-main__message--top
+          .chat-main__message--name
+            sample-user-name
+          .chat-main__message--date-and-time
+            2018-04-01 09:38:15
+        .chat-main__message--bottom
+          sample user message sample user message sample user message sample user message sample user message sample user message
+      .chat-main__message
+        .chat-main__message--top
+          .chat-main__message--name
+            sample-user-name
+          .chat-main__message--date-and-time
+            2018-04-01 09:40:93
+        .chat-main__message--bottom
+          sample user message sample user message sample user message sample user message
+          sample user message sample user message sample user message sample user message
+  .chat-main__footer
+    = form_tag({ controller: "messages", action: "index" }, class: "chat-main__form") do
+      = text_field :message, :image, class: "chat-main__form--message", placeholder: "type a message"
+      = label_tag "", class: "chat-main__form--mask" do
+        %i.fa.fa-picture-o
+        = file_field :message, :image, class:"hidden"
+      = submit_tag "Send", class: "chat-main__form--submit"
