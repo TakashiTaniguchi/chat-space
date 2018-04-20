@@ -11,28 +11,28 @@
   .chat-side__groups
     %a{ href: "" }
       .chat-side__group
-        .chat-side__group-name
+        .chat-side__group--name
           sample-group-name
-        .chat-side__group-message
+        .chat-side__group--message
           sample group message
     %a{ href: "" }
       .chat-side__group
-        .chat-side__group-name
+        .chat-side__group--name
           sample-group-name
-        .chat-side__group-message
+        .chat-side__group--message
           sample group message sample group message
     %a{ href: "" }
       .chat-side__group
-        .chat-side__group-name
+        .chat-side__group--name
           sample-group-name
-        .chat-side__group-message
+        .chat-side__group--message
           sample group message sample group message sample group message
 .chat-main
   .chat-main__header
     .chat-main__header--top
-      .chat-main__header--top-name
+      .chat-main__header--name
         sample-group-name
-      %a.chat-main__header--top-edit-btn{ href: "" }
+      %a.chat-main__header--edit-btn{ href: "" }
         Edit
     .chat-main__header--bottom
       MEMBER:
@@ -42,41 +42,41 @@
     .chat-main__body--messages
       .chat-main__message
         .chat-main__message--top
-          .chat-main__message--top-name
+          .chat-main__message--name
             sample-user-name
-          .chat-main__message--top-date-and-time
+          .chat-main__message--date-and-time
             2018-04-01 09:30:04
         .chat-main__message--bottom
           sample user message sample user message
       .chat-main__message
         .chat-main__message--top
-          .chat-main__message--top-name
+          .chat-main__message--name
             sample-user-name
-          .chat-main__message--top-date-and-time
+          .chat-main__message--date-and-time
             2018-04-01 09:34:05
         .chat-main__message--bottom
           sample user message sample user message sample user message sample user message
       .chat-main__message
         .chat-main__message--top
-          .chat-main__message--top-name
+          .chat-main__message--name
             sample-user-name
-          .chat-main__message--top-date-and-time
+          .chat-main__message--date-and-time
             2018-04-01 09:38:15
         .chat-main__message--bottom
           sample user message sample user message sample user message sample user message sample user message sample user message
       .chat-main__message
         .chat-main__message--top
-          .chat-main__message--top-name
+          .chat-main__message--name
             sample-user-name
-          .chat-main__message--top-date-and-time
+          .chat-main__message--date-and-time
             2018-04-01 09:40:93
         .chat-main__message--bottom
           sample user message sample user message sample user message sample user message
           sample user message sample user message sample user message sample user message
   .chat-main__footer
-    %form.chat-main__footer--form{ action: "", method: "post" }
-      %input.form__message{ placeholder: "type a message", type: "text", name: "massage[body]"}
-      %label.form__mask
+    %form.chat-main__form{ action: "", method: "post" }
+      %input.chat-main__form--message{ placeholder: "type a message", type: "text", name: "massage[body]"}
+      %label.chat-main__form--mask
         %i.fa.fa-picture-o
         %input.hidden{ type: "file", name: "message[image]" }
-      %input.form__submit{ type: "submit", value: "Send" }
+      %input.chat-main__form--submit{ type: "submit", value: "Send" }

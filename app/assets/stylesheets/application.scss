@@ -60,10 +60,10 @@ body, html {
   }
   &__group {
     padding: 20px;
-    &-name {
+    &--name {
       font-size: 15px;
     }
-    &-message {
+    &--message {
       font-size: 11px;
       padding-top: 5px;
     }
@@ -80,22 +80,22 @@ body, html {
     border-bottom: 1px solid $mainLightGray;
     &--top {
       @include clearfix();
-      &-name {
-        font-size: 20px;
-        color: $mainMidnightGray;
-        margin: 35px 0 15px;
-        float: left;
-      }
-      &-edit-btn {
-        font-size: 12px;
-        color: $mainLightBlue;
-        text-decoration: none;
-        line-height: 38px;
-        padding: 0 20px;
-        border: 1px solid $mainLightBlue;
-        margin-top: 28px;
-        float: right;
-      }
+    }
+    &--name {
+      font-size: 20px;
+      color: $mainMidnightGray;
+      margin: 35px 0 15px;
+      float: left;
+    }
+    &--edit-btn {
+      font-size: 12px;
+      color: $mainLightBlue;
+      text-decoration: none;
+      line-height: 38px;
+      padding: 0 20px;
+      border: 1px solid $mainLightBlue;
+      margin-top: 28px;
+      float: right;
     }
     &--bottom {
       height: 19px;
@@ -121,18 +121,18 @@ body, html {
       @include clearfix();
       line-height: 24px;
       padding-bottom: 10px;
-      &-name {
-        font-size: 16px;
-        font-weight: bold;
-        color: $mainDarkBlueGray;
-        float: left;
-      }
-      &-date-and-time {
-        padding-left: 10px;
-        font-size: 12px;
-        color: $mainGray;
-        float: left;
-      }
+    }
+    &--name {
+      font-size: 16px;
+      font-weight: bold;
+      color: $mainDarkBlueGray;
+      float: left;
+    }
+    &--date-and-time {
+      padding-left: 10px;
+      font-size: 12px;
+      color: $mainGray;
+      float: left;
     }
     &--bottom {
         font-size: 14px;
@@ -143,41 +143,38 @@ body, html {
     height: 90px;
     width: 100%;
     background-color: $mainDarkGray;
-      &--form {
-        @include clearfix();
-        padding: 20px 40px;
-      }
   }
-}
-
-.form {
-  &__message {
-    height: 50px;
-    width: calc(100% - 167px);
-    padding: 0 10px;
-    border: none;
-    font-size: 16px;
-    color: $mainDarkBlueGray;
-    float: left;
-  }
-  &__mask {
-    height: 50px;
-    line-height: 50px;
-    width: 22px;
-    padding-right: 10px;
-    background-color: white;
-    font-size: 20px;
-    color: $mainDarkBlueGray;
-    float: left;
-  }
-  &__submit {
-    height: 50px;
-    width: 100px;
-    border: none;
-    background-color: $mainLightBlue;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    float: right;
+  &__form {
+      @include clearfix();
+      padding: 20px 40px;
+    &--message {
+      height: 50px;
+      width: calc(100% - 167px);
+      padding: 0 10px;
+      border: none;
+      font-size: 16px;
+      color: $mainDarkBlueGray;
+      float: left;
+    }
+    &--mask {
+      height: 50px;
+      line-height: 50px;
+      width: 22px;
+      padding-right: 10px;
+      background-color: white;
+      font-size: 20px;
+      color: $mainDarkBlueGray;
+      float: left;
+    }
+    &--submit {
+      height: 50px;
+      width: 100px;
+      border: none;
+      background-color: $mainLightBlue;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      float: right;
+    }
   }
 }
