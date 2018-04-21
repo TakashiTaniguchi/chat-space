@@ -3,12 +3,10 @@
     .account-page__inner--left.account-page__header
       %h2 Edit Account
       %h5 アカウントの編集
-      / = render "devise/shared/links"
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
       = link_to "トップページに戻る", root_path, method: :get, class: 'btn'
     .account-page__inner--right.user-form
       = form_for(current_user) do |f|
-        / = devise_error_messages!
         .field
           .field-label
             = f.label :name
