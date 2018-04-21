@@ -3,7 +3,7 @@
 .chat-side
   .chat-side__user
     .chat-side__user--name
-      sample-user-name
+      = current_user.name
     = link_to "", class: "chat-side__user--edit-user" do
       %i.fa.fa-cog
     = link_to "", class: "chat-side__user--new-group" do
