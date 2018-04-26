@@ -1,7 +1,9 @@
 @import "./reset";
 @import "./config/variable";
 @import "./mixin/clearfix";
+@import "./modules/user";
 @import "font-awesome";
+@import "./modules/flash";
 
 body, html {
   height: 100%;
@@ -10,12 +12,6 @@ body, html {
 
 .fa {
   color: inherit;
-}
-
-.notification {
-  background-color: $mainLightBlue;
-  color: white;
-  text-align: center;
 }
 
 .hidden {
