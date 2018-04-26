@@ -16,6 +16,6 @@ module ChatSpace
       g.helper false # helperクラスを生成しない
       g.test_framework false # テストスクリプトを生成しない
     end
-
+    config.i18n.default_locale = :ja
   end
 end
