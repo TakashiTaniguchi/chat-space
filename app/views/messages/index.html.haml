@@ -1,19 +1,4 @@
-.chat-side
-  .chat-side__user
-    .chat-side__user--name
-      = current_user.name
-    = link_to edit_user_path(current_user), class: "chat-side__user--edit-user" do
-      %i.fa.fa-cog
-    = link_to new_group_path, class: "chat-side__user--new-group" do
-      %i.fa.fa-pencil-square-o
-  .chat-side__groups
-    - current_user.groups.each do |group|
-      = link_to group_messages_path(group) do
-        .chat-side__group
-          .chat-side__group--name
-            = group.name
-          .chat-side__group--message
-            There are no messages
+= render "shared/side_bar"
 .chat-main
   .chat-main__header
     .chat-main__header--top
