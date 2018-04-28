@@ -7,24 +7,13 @@
     = link_to new_group_path, class: "chat-side__user--new-group" do
       %i.fa.fa-pencil-square-o
   .chat-side__groups
-    = link_to "" do
-      .chat-side__group
-        .chat-side__group--name
-          sample-group-name
-        .chat-side__group--message
-          sample group message
-    = link_to "" do
-      .chat-side__group
-        .chat-side__group--name
-          sample-group-name
-        .chat-side__group--message
-          sample group message sample group message
-    = link_to "" do
-      .chat-side__group
-        .chat-side__group--name
-          sample-group-name
-        .chat-side__group--message
-          sample group message sample group message sample group message
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .chat-side__group
+          .chat-side__group--name
+            = group.name
+          .chat-side__group--message
+            There are no messages
 .chat-main
   .chat-main__header
     .chat-main__header--top
