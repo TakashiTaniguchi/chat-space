@@ -46,9 +46,10 @@
           sample user message sample user message sample user message sample user message
           sample user message sample user message sample user message sample user message
   .chat-main__footer
-    = form_tag({ controller: "messages", action: "index" }, class: "chat-main__form") do
-      = text_field :message, :image, class: "chat-main__form--message", placeholder: "type a message"
-      = label_tag "", class: "chat-main__form--mask" do
-        %i.fa.fa-picture-o
-        = file_field :message, :image, class:"hidden"
-      = submit_tag "Send", class: "chat-main__form--submit"
+    .chat-main__form
+      = form_for [@group, @message] do |f|
+        = f.text_field :body, class: "chat-main__form--message", placeholder: "type a message"
+        = f.label :image, class: "chat-main__form--mask" do
+          %i.fa.fa-picture-o
+          = f.file_field :image, class:"hidden"
+        = f.submit "Send", class: "chat-main__form--submit"
