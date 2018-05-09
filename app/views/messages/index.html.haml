@@ -18,7 +18,7 @@
             .chat-main__message--name
               = message.user.name
             .chat-main__message--date-and-time
-              = message.created_at
+              = l message.created_at, format: :long
           .chat-main__message--bottom
             = message.body if message.body.present?
             = image_tag message.image.url if message.image.present?
