@@ -12,16 +12,7 @@
         sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name
   .chat-main__body
     .chat-main__body--messages
-      - @messages.each do |message|
-        .chat-main__message
-          .chat-main__message--top
-            .chat-main__message--name
-              = message.user.name
-            .chat-main__message--date-and-time
-              = l message.created_at, format: :long
-          .chat-main__message--bottom
-            = message.body if message.body.present?
-            = image_tag message.image.url if message.image.present?
+      = render @messages
   .chat-main__footer
     .chat-main__form
       = form_for [@group, @message] do |f|
