@@ -9,7 +9,8 @@
     .chat-main__header--bottom
       MEMBER:
       %i
-        sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name
+        - @group.users.each do |user|
+          = user.name
   .chat-main__body
     .chat-main__body--messages
       = render @messages
