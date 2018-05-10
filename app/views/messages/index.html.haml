@@ -3,13 +3,14 @@
   .chat-main__header
     .chat-main__header--top
       .chat-main__header--name
-        sample-group-name
-      = link_to "", class: "chat-main__header--edit-btn" do
+        = @group.name
+      = link_to edit_group_path(@group), class: "chat-main__header--edit-btn" do
         Edit
     .chat-main__header--bottom
       MEMBER:
       %i
-        sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name sample-user-name
+        - @group.users.each do |user|
+          = user.name
   .chat-main__body
     .chat-main__body--messages
       = render @messages
