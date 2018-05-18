@@ -16,7 +16,8 @@ describe MessagesController, type: :controller do
         expect(assigns(:group)).to eq group
       end
 
-      it 'assigns @message' do
+      it 'assigns a new message to @message' do
+        expect(assigns(:message)).to be_a_new(Message)
       end
 
       it 'renders index' do
