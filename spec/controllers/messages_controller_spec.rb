@@ -20,7 +20,8 @@ describe MessagesController, type: :controller do
         expect(assigns(:message)).to be_a_new(Message)
       end
 
-      it 'renders index' do
+      it 'renders the :index template' do
+        expect(response).to render_template :index
       end
     end
 
