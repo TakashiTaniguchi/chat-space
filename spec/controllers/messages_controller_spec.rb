@@ -61,6 +61,16 @@ describe MessagesController, type: :controller do
       end
 
       context 'can not save' do
+        let(:invalid_params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message, body: nil, image: nil) } }
+
+        subject {
+          post :create,
+          params: invalid_params
+        }
+
+        it 'does not increase the count of the messages' do
+          expect{ subject }.not_to change(Message, :count)
+        end
       end
     end
 
