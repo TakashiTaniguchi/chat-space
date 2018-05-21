@@ -53,6 +53,11 @@ describe MessagesController, type: :controller do
         it 'increases the count of the messages' do
           expect{ subject }.to change(Message, :count).by(1)
         end
+
+        it 'redirects to the group_messages_path' do
+          subject
+          expect(response).to redirect_to(group_messages_path)
+        end
       end
 
       context 'can not save' do
