@@ -45,6 +45,14 @@ describe MessagesController, type: :controller do
       end
 
       context 'can save' do
+        subject {
+          post :create,
+          params: params
+        }
+
+        it 'increases the count of the messages' do
+          expect{ subject }.to change(Message, :count).by(1)
+        end
       end
 
       context 'can not save' do
