@@ -4,7 +4,7 @@ describe MessagesController, type: :controller do
   let(:user) { create(:user) }
   let(:group) { create(:group) }
 
-  describe '#index' do
+  describe 'GET #index' do
 
     context 'log in' do
       before do
@@ -36,7 +36,9 @@ describe MessagesController, type: :controller do
     end
   end
 
-  describe '#create' do
+  describe 'POST #create' do
+    let(:params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message) } }
+
     context 'log in' do
       before do
         login_user user
@@ -50,6 +52,10 @@ describe MessagesController, type: :controller do
     end
 
     context 'not log in' do
+      it 'redirects to the new_user_session_path' do
+        post :create, params: params
+        expect(response).to redirect_to(new_user_session_path)
+      end
     end
   end
 end
