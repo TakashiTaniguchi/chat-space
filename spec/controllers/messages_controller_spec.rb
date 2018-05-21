@@ -71,6 +71,11 @@ describe MessagesController, type: :controller do
         it 'does not increase the count of the messages' do
           expect{ subject }.not_to change(Message, :count)
         end
+
+        it 'renders the :index template' do
+          subject
+          expect(response).to render_template :index
+        end
       end
     end
 
