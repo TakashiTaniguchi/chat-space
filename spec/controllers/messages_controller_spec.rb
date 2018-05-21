@@ -35,4 +35,21 @@ describe MessagesController, type: :controller do
       end
     end
   end
+
+  describe '#create' do
+    context 'log in' do
+      before do
+        login_user user
+      end
+
+      context 'can save' do
+      end
+
+      context 'can not save' do
+      end
+    end
+
+    context 'not log in' do
+    end
+  end
 end
