@@ -1,6 +1,5 @@
 $(function(){
   function buildHTML(message){
-    var createdAt = message.created_at.substr(0, 19).replace(/-/g, '/').replace('T', ' ');
     var imgTag = message.image_url === null
       ? ``
       : `<br>
@@ -12,7 +11,7 @@ $(function(){
           ${message.user_name}
         </div>
         <div class="chat-main__message--date-and-time">
-          ${createdAt}
+          ${message.created_at}
         </div>
       </div>
       <div class="chat-main__message--bottom">
