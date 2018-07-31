@@ -1,13 +1,10 @@
 $(function(){
   function buildHTML(message){
     var createdAt = message.created_at.substr(0, 19).replace(/-/g, '/').replace('T', ' ');
-    var imgTag = ``
-    if (message.image_url !== null) {
-      imgTag = `
-      <br>
-      <img src="${message.image_url}">
-      `
-    }
+    var imgTag = (message.image_url === null)
+      ? (``)
+      : (`<br>
+        <img src="${message.image_url}">`)
     var html = `
     <div class="chat-main__message" id="latest">
       <div class="chat-main__message--top">
