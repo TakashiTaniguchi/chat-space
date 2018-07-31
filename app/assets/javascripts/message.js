@@ -39,8 +39,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.chat-main__body--messages').append(html)
-      $('#message_body').val('')
-      $('#message_image').val('')
+      $('form')[0].reset();
       $('.chat-main__body').animate({scrollTop:$('#latest').position().top})
     })
     .fail(function(){
