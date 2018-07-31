@@ -6,4 +6,5 @@
       = l message.created_at, format: :long
   .chat-main__message--bottom
     = message.body if message.body.present?
+    %br
     = image_tag message.image.url if message.image.present?
