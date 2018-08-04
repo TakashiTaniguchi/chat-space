@@ -93,7 +93,6 @@ $(document).on('turbolinks:load', function() {
 
   $(document).off('click', '.js-remove-btn');
   $(document).on('click', '.js-remove-btn', function(){
-    console.log(this);
     var userId = $(this).data("user-id")
     var userName = $(this).data("user-name")
     $(this).parent().remove();
