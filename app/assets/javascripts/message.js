@@ -40,7 +40,6 @@ $(document).on('turbolinks:load', function() {
       processData: false,
       contentType: false
     })
-
     .done(function(data) {
       var html = buildHTML(data);
       $('.chat-main__body--messages').append(html)
@@ -48,14 +47,13 @@ $(document).on('turbolinks:load', function() {
       $('form')[0].reset();
       scrollToLastMessage();
     })
-
     .fail(function() {
       alert('error');
     })
   })
 
   var interval = setInterval(function() {
-    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    if (window.location.pathname.match(/\/groups\/\d+\/messages/)) {
       var messageId = $('.chat-main__message:last').data('message-id');
 
       $.ajax({
@@ -64,7 +62,6 @@ $(document).on('turbolinks:load', function() {
         data: { id: messageId },
         dataType: 'json'
       })
-
       .done(function(data) {
         var html = '';
         data.forEach(function(message) {
@@ -73,7 +70,6 @@ $(document).on('turbolinks:load', function() {
         $('.chat-main__body--messages').append(html);
         scrollToLastMessage();
       })
-
       .fail(function() {
         alert('error');
       })
