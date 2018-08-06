@@ -44,6 +44,7 @@ $(document).on('turbolinks:load', function() {
     .done(function(data) {
       var html = buildHTML(data);
       $('.chat-main__body--messages').append(html)
+      $('.chat-main__form--submit').prop('disabled', false);
       $('form')[0].reset();
       scrollToLastMessage();
     })
