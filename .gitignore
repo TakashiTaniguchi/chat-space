@@ -17,4 +17,4 @@
 .byebug_history
 
 # Ignore uploads directory
-/public/uploads/
+# /public/uploads/
