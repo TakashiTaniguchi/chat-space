@@ -18,3 +18,4 @@
 
 # Ignore uploads directory
 # /public/uploads/
+config/secrets.yml
