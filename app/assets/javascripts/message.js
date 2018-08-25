@@ -52,29 +52,29 @@ $(document).on('turbolinks:load', function() {
     })
   })
 
-  var interval = setInterval(function() {
-    if (window.location.pathname.match(/\/groups\/\d+\/messages/)) {
-      var messageId = $('.chat-main__message:last').data('message-id');
+  // var interval = setInterval(function() {
+  //   if (window.location.pathname.match(/\/groups\/\d+\/messages/)) {
+  //     var messageId = $('.chat-main__message:last').data('message-id');
 
-      $.ajax({
-        url: location.href,
-        type: 'GET',
-        data: { id: messageId },
-        dataType: 'json'
-      })
-      .done(function(data) {
-        var html = '';
-        data.forEach(function(message) {
-          html += buildHTML(message);
-        });
-        $('.chat-main__body--messages').append(html);
-        scrollToLastMessage();
-      })
-      .fail(function() {
-        alert('error');
-      })
-    } else {
-      clearInterval(interval);
-    }
-  }, 5000);
+  //     $.ajax({
+  //       url: location.href,
+  //       type: 'GET',
+  //       data: { id: messageId },
+  //       dataType: 'json'
+  //     })
+  //     .done(function(data) {
+  //       var html = '';
+  //       data.forEach(function(message) {
+  //         html += buildHTML(message);
+  //       });
+  //       $('.chat-main__body--messages').append(html);
+  //       scrollToLastMessage();
+  //     })
+  //     .fail(function() {
+  //       alert('error');
+  //     })
+  //   } else {
+  //     clearInterval(interval);
+  //   }
+  // }, 5000);
 })
